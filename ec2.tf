@@ -74,7 +74,7 @@ resource "aws_security_group" "ec2_security_group" {
 }
 
 
-# use data source to get a registered amazon linux 2 ami
+# use data source to get a registered amazon linux 2 ami#
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
   owners      = ["amazon"]
@@ -91,7 +91,7 @@ data "aws_ami" "amazon_linux_2" {
 }
 
 
-# launch the ec2 instance and install website
+# launch the ec2 instance and install website#
 resource "aws_instance" "ec2_instance" {
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = "t2.micro"
