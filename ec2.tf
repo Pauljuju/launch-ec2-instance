@@ -1,11 +1,11 @@
-# configured aws provider with proper credentials
+# configured aws provider with proper credentials#
 provider "aws" {
   region  = "eu-west-2"
   profile = "terraform-user"
 }
 
 
-# store the terraform state file in s3
+# store the terraform state file in s3#
 terraform {
   backend "s3" {
     bucket  = "cde-build-bucket"
@@ -16,7 +16,7 @@ terraform {
 }
 
 
-# create default vpc if one does not exit
+# create default vpc if one does not exit#
 resource "aws_default_vpc" "default_vpc" {
 
   tags = {
